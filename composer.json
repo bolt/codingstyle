@@ -1,0 +1,13 @@
+{
+    "name": "bolt/codingstyle",
+    "description": "PHP_CodeSniffer rule set for Bolt",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gawain Lynch",
+            "email": "gawain.lynch@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
