@@ -1,6 +1,6 @@
 #Bolt coding style standard
 
-Bolt tries to adhere a coding style based on PSR-2 and the Symfony2 coding standard.
+[Bolt](https://github.com/bolt) tries to adhere a coding style based on PSR-2 and the Symfony2 coding standard.
 To help following our standard a ruleset for [PHP_CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer) is provided.
 
 This standard is a work in progress and will be refined over time!
