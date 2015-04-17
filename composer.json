@@ -9,5 +9,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "m6web/symfony2-coding-standard" : "dev-master@dev"
+	}
 }
