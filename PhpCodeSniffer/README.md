@@ -10,7 +10,7 @@ This standard is a work in progress and will be refined over time!
 ###Installation
 
 - Install/update using composers `--require-dev` command
-- Install PHP_CodeSniffer or use the one that is installed with compooser
+- Install PHP_CodeSniffer or use the one that is installed with composer
 - Start phpcs with `--standard Bolt <path-to-bolt>/CodeSniffer/Bolt`
 
 ###Run
