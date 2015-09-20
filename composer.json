@@ -10,6 +10,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "m6web/symfony2-coding-standard" : "dev-master@dev"
+        "m6web/symfony2-coding-standard" : "3.1.*"
 	}
 }
