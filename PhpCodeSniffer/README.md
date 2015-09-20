@@ -218,7 +218,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 
 - **Squiz.Scope.StaticThisUsage** (+)
 
-- **Squiz.Strings.ConcatenationSpacing**
+- <del>Squiz.Strings.ConcatenationSpacing</del>
 
 - **Squiz.Strings.EchoedStrings** (+)
 
