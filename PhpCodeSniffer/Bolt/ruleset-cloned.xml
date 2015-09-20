@@ -25,6 +25,8 @@
     <rule ref="../../vendor/m6web/symfony2-coding-standard/Symfony2">
         <!-- We use: Bolt.Functions.FunctionCallSignature -->
         <exclude name="PEAR.Functions.FunctionCallSignature"/>
+        <!-- We use: Bolt.Whitespace.ConcatenationSpacing -->
+        <exclude name="Squiz.Strings.ConcatenationSpacing"/>
         <!-- Not now -->
         <exclude name="Symfony2.Commenting.ClassComment"/>
         <exclude name="Symfony2.Commenting.FunctionComment"/>
