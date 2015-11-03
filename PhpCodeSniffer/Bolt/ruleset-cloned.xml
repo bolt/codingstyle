@@ -68,7 +68,11 @@
     <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing"/>-->
 
     <!-- Verifies that operators have valid spacing surrounding them. -->
-    <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true"/>
+        </properties>
+    </rule>
 
     <!-- ##### PHP ################################################################################################# -->
 
