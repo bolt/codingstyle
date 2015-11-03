@@ -74,25 +74,29 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 
 ###Bolt
 
-- **Bolt.Functions.FunctionCallSignature** (+)
+- **Bolt.Functions.FunctionCallSignature** (+)<br>
+  Allow indented fluent interface
 
-- **Bolt.NamingConventions.AbstractPrefix** (+)
+- **Bolt.NamingConventions.AbstractPrefix** (+)<br>
+  Throws errors if abstract classes names are not prefixed with "Abstract". This rule has added an exception for
+  "BaseExtension"
 
-- **Bolt.NamingConventions.TraitSuffix** (+)
-
-- **Bolt.Whitespace.ConcatenationSpacing** (+)
+- **Bolt.NamingConventions.TraitSuffix** (+)<br>
+  Throws errors if trait names are not suffixed with "Trait".
 
 ###Generic
 
 - **Generic.ControlStructures.InlineControlStructure**<br>
   Control Structures should use braces.
 
-- **Generic.Files.ByteOrderMark**
+- **Generic.Files.ByteOrderMark**<br>
+  A simple sniff for detecting BOMs that may corrupt application work.
 
 - **Generic.Files.LineEndings**<br>
   Unix-style endlines are preferred
 
-- **Generic.Formatting.DisallowMultipleStatements**
+- **Generic.Formatting.DisallowMultipleStatements**<br>
+  Ensures each statement is on a line by itself.
 
 - **Generic.Formatting.SpaceAfterCast**<br>
   Exactly one space is allowed after a cast.
@@ -107,24 +111,29 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **Generic.NamingConventions.UpperCaseConstantName**<br>
   Constants should always be all-uppercase, with underscores to separate words.
 
-- **Generic.PHP.DeprecatedFunctions** (+)
+- **Generic.PHP.DeprecatedFunctions** (+)<br>
+  Discourages the use of deprecated functions that are kept in PHP for compatibility with older versions.
 
 - **Generic.PHP.DisallowShortOpenTag**<br>
   Always use <?php ?> to delimit PHP code, not the <? ?> shorthand.
 
-- **Generic.PHP.ForbiddenFunctions** (+)
+- **Generic.PHP.ForbiddenFunctions** (+)<br>
+  Discourages the use of alias functions that are kept in PHP for compatibility with older versions.
 
 - **Generic.PHP.LowerCaseConstant**<br>
   The "true", "false" and "null" constants must always be lowercase.
 
-- **Generic.PHP.LowerCaseKeyword**
+- **Generic.PHP.LowerCaseKeyword**<br>
+  Checks that all PHP keywords are lowercase.
 
-- **Generic.PHP.NoSilencedErrors** (+)
+- **Generic.PHP.NoSilencedErrors** (+)<br>
+  Ensures no code is prefixed with an asperand.
 
 - **Generic.WhiteSpace.DisallowTabIndent**<br>
   Spaces should be used for indentation instead of tabs.
 
-- **Generic.WhiteSpace.ScopeIndent**
+- **Generic.WhiteSpace.ScopeIndent**<br>
+  Checks that control structures are structured correctly, and their content is indented correctly.
 
 ###PEAR
 
@@ -146,42 +155,58 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 
 ###PSR1
 
-- **PSR1.Classes.ClassDeclaration**
+- **PSR1.Classes.ClassDeclaration**<br>
+  Checks the declaration of the class is correct.
 
-- **PSR1.Files.SideEffects**
+- **PSR1.Files.SideEffects**<br>
+  Ensures a file declare new symbols and causes no other side effects, or executes logic with side effects, but not
+  both.
 
-- **PSR1.Methods.CamelCapsMethodName**
+- **PSR1.Methods.CamelCapsMethodName**<br>
+  Ensures method names are defined using camel case.
 
 ###PSR2
 
-- **PSR2.Classes.ClassDeclaration**
+- **PSR2.Classes.ClassDeclaration**<br>
+  Checks the declaration of the class is correct.
 
-- **PSR2.Classes.PropertyDeclaration**
+- **PSR2.Classes.PropertyDeclaration**<br>
+  Verifies that properties are declared correctly.
 
-- **PSR2.ControlStructures.ControlStructureSpacing**
+- **PSR2.ControlStructures.ControlStructureSpacing**<br>
+  Checks that control structures have the correct spacing around brackets.
 
-- **PSR2.ControlStructures.ElseIfDeclaration**
+- **PSR2.ControlStructures.ElseIfDeclaration**<br>
+  Verifies that there are no else if statements. Elseif should be used instead.
 
-- **PSR2.ControlStructures.SwitchDeclaration**
+- **PSR2.ControlStructures.SwitchDeclaration**<br>
+  Ensures all switch statements are defined correctly.
 
-- **PSR2.Files.ClosingTag**
+- **PSR2.Files.ClosingTag**<br>
+  Checks that the file does not end with a closing tag.
 
-- **PSR2.Files.EndFileNewline**
+- **PSR2.Files.EndFileNewline**<br>
+  Ensures the file ends with a newline character.
 
-- **PSR2.Methods.FunctionCallSignature**
+- **PSR2.Methods.FunctionCallSignature**<br>
+  Multiple arguments per line are not allowed in a multi-line call.
 
-- **PSR2.Methods.MethodDeclaration**
+- **PSR2.Methods.MethodDeclaration**<br>
+  Checks that the method declaration is correct.
 
-- **PSR2.Namespaces.NamespaceDeclaration**
+- **PSR2.Namespaces.NamespaceDeclaration**<br>
+  Ensures namespaces are declared correctly.
 
-- **PSR2.Namespaces.UseDeclaration**
+- **PSR2.Namespaces.UseDeclaration**<br>
+  Ensures USE blocks are declared correctly.
 
 ###Squiz
 
 - **Squiz.Arrays.ArrayBracketSpacing**<br>
   No spaces around square brackets.
 
-- **Squiz.Classes.ValidClassName**
+- **Squiz.Classes.ValidClassName**<br>
+  Ensures class and interface names start with a capital letter and use _ separators.
 
 - **Squiz.ControlStructures.ControlSignature**<br>
   Verifies that control statements conform to their coding standards.
@@ -195,57 +220,77 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **Squiz.ControlStructures.LowercaseDeclaration**<br>
   All control structure keywords are lowercase.
 
-- **Squiz.Functions.FunctionDeclaration**
+- **Squiz.Functions.FunctionDeclaration**<br>
+  Ensure single and multi-line function declarations are defined correctly.
 
-- **Squiz.Functions.FunctionDeclarationArgumentSpacing**
+- **Squiz.Functions.FunctionDeclarationArgumentSpacing**<br>
+  Checks that arguments in function declarations are spaced correctly.
 
 - **Squiz.Functions.GlobalFunction**<br>
   No functions outside of classes.
 
-- **Squiz.Functions.LowercaseFunctionKeywords**
+- **Squiz.Functions.LowercaseFunctionKeywords**<br>
+  Ensures all class keywords are lowercase.
 
-- **Squiz.Functions.MultiLineFunctionDeclaration**
+- **Squiz.Functions.MultiLineFunctionDeclaration**<br>
+  Ensure single and multi-line function declarations are defined correctly.
 
 - **Squiz.PHP.LowercasePHPFunctions**<br>
   All calls to inbuilt PHP functions have to be lowercase.
 
-- **Squiz.PHP.NonExecutableCode** (+)
+- **Squiz.PHP.NonExecutableCode** (+)<br>
+  Warns about code that can never been executed.
 
 - **Squiz.Scope.MemberVarScope**<br>
   Verifies that class members have scope modifiers.
 
-- **Squiz.Scope.MethodScope**
+- **Squiz.Scope.MethodScope**<br>
+  Verifies that class members have scope modifiers.
 
-- **Squiz.Scope.StaticThisUsage** (+)
+- **Squiz.Scope.StaticThisUsage** (+)<br>
+  Checks for usage of "$this" in static methods, which will cause runtime errors.
 
-- <del>Squiz.Strings.ConcatenationSpacing</del>
+- **Squiz.Strings.ConcatenationSpacing**<br>
+  One space (customized!) between the concatenation operator (.) and the strings being concatenated.
 
-- **Squiz.Strings.EchoedStrings** (+)
+- **Squiz.Strings.EchoedStrings** (+)<br>
+  Makes sure that any strings that are "echoed" are not enclosed in brackets like a function call.
 
-- **Squiz.WhiteSpace.FunctionOpeningBraceSpace** (+)
+- **Squiz.WhiteSpace.FunctionOpeningBraceSpace** (+)<br>
+  Checks that there is no empty line after the opening brace of a function.
 
-- **Squiz.WhiteSpace.LanguageConstructSpacing** (+)
+- **Squiz.WhiteSpace.LanguageConstructSpacing** (+)<br>
+  Ensures all language constructs (without brackets) contain a single space between themselves and their content.
 
-- **Squiz.WhiteSpace.LogicalOperatorSpacing** (+)
+- **Squiz.WhiteSpace.LogicalOperatorSpacing** (+)<br>
+  Verifies that operators have valid spacing surrounding them.
 
-- **Squiz.WhiteSpace.OperatorSpacing** (+)
+- **Squiz.WhiteSpace.OperatorSpacing** (+)<br>
+  Verifies that operators have valid spacing surrounding them.
 
-- **Squiz.WhiteSpace.ScopeClosingBrace**
+- **Squiz.WhiteSpace.ScopeClosingBrace**<br>
+  Checks that the closing braces of scopes are aligned correctly.
 
-- **Squiz.WhiteSpace.ScopeKeywordSpacing**
+- **Squiz.WhiteSpace.ScopeKeywordSpacing**<br>
+  Ensure there is a single space after scope keywords.
 
-- **Squiz.WhiteSpace.SemicolonSpacing** (+)
+- **Squiz.WhiteSpace.SemicolonSpacing** (+)<br>
+  Ensure there is no whitespace before a semicolon.
 
-- **Squiz.WhiteSpace.SuperfluousWhitespace**
+- **Squiz.WhiteSpace.SuperfluousWhitespace**<br>
+  Checks that no whitespace proceeds the first content of the file, exists after the last content of the file, resides
+  after content on any line, or are two empty lines in functions.
 
 ###Symfony2
 
-- **Symfony2.Arrays.MultiLineArrayComma**
+- **Symfony2.Arrays.MultiLineArrayComma**<br>
+  Warns if the last item in a multi line array does not have a trailing comma
 
 - **Symfony2.Classes.MultipleClassesOneFile**<br>
   Define one class per file
 
-- **Symfony2.Classes.PropertyDeclaration**
+- **Symfony2.Classes.PropertyDeclaration**<br>
+  Verifies that properties are declared correctly.
 
 - <del>Symfony2.Commenting.ClassComment</del><br>
   <del>A doc comment should exists. Blank newline after short description, between the long and short description and
@@ -258,18 +303,23 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **Symfony2.Formatting.BlankLineBeforeReturn**<br>
   Add a blank line before return statements, unless the return is alone inside a statement-group.
 
-- **Symfony2.Functions.ScopeOrder**
+- **Symfony2.Functions.ScopeOrder**<br>
+  Warns if properties are declared after methods.
 
-- **Symfony2.NamingConventions.ValidClassName**
+- **Symfony2.NamingConventions.ValidClassName**<br>
+  Ensures class and interface names start with a capital letter and use _ separators.
 
-- **Symfony2.Objects.ObjectInstantiation**
+- **Symfony2.Objects.ObjectInstantiation**<br>
+  Ensures objects are assigned to a variable when instantiated.
 
 - **Symfony2.Scope.MethodScope**<br>
   Class members should have scope modifiers.
 
-- **Symfony2.WhiteSpace.BinaryOperatorSpacing**
+- **Symfony2.WhiteSpace.BinaryOperatorSpacing**<br>
+  Warns if a binary operator isn't surrounded with whitespace.
 
-- **Symfony2.WhiteSpace.CommaSpacing**
+- **Symfony2.WhiteSpace.CommaSpacing**<br>
+  Warns if a comma isn't followed by a whitespace.
 
 - **Symfony2.WhiteSpace.DiscourageFitzinator**<br>
   No trailing whitespace in a file
