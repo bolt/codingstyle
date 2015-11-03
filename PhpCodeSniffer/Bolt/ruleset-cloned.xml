@@ -25,11 +25,17 @@
     <rule ref="../../vendor/m6web/symfony2-coding-standard/Symfony2">
         <!-- We use: Bolt.Functions.FunctionCallSignature -->
         <exclude name="PEAR.Functions.FunctionCallSignature"/>
-        <!-- We use: Bolt.Whitespace.ConcatenationSpacing -->
-        <exclude name="Squiz.Strings.ConcatenationSpacing"/>
         <!-- Not now -->
         <exclude name="Symfony2.Commenting.ClassComment"/>
         <exclude name="Symfony2.Commenting.FunctionComment"/>
+    </rule>
+
+	<!-- We use one space instead and allow newlines -->
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+        <properties>
+            <property name="spacing" value="1"/>
+            <property name="ignoreNewlines" value="true"/>
+        </properties>
     </rule>
 
     <!-- ##### BOLT ################################################################################################ -->
@@ -42,9 +48,6 @@
 
     <!-- Trait names should be suffixed with "Trait" -->
     <rule ref="Bolt.NamingConventions.TraitSuffix"/>
-
-    <!-- Makes sure there are spaces between the concatenation operator (.) and the strings being concatenated. -->
-    <rule ref="Bolt.Whitespace.ConcatenationSpacing"/>
 
     <!-- ##### WHITESPACE ########################################################################################## -->
 
