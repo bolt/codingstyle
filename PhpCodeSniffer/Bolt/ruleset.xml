@@ -30,7 +30,7 @@
         <exclude name="Symfony2.Commenting.FunctionComment"/>
     </rule>
 
-	<!-- We use one space instead and allow newlines -->
+    <!-- We use one space instead and allow newlines -->
     <rule ref="Squiz.Strings.ConcatenationSpacing">
         <properties>
             <property name="spacing" value="1"/>
@@ -61,7 +61,8 @@
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
 
     <!-- Ensure there is no whitespace before a semicolon ";". -->
-    <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
+    <!-- Breaks fluent-interface chained call syntax
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/> -->
 
     <!-- Ensure there is no whitespace before a ObjectOperator "->". -->
     <!-- Does not work for concatenated operators!
