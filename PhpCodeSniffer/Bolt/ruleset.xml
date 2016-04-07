@@ -28,6 +28,7 @@
         <!-- Not now -->
         <exclude name="Symfony2.Commenting.ClassComment"/>
         <exclude name="Symfony2.Commenting.FunctionComment"/>
+        <exclude name="Squiz.Strings.ConcatenationSpacing"/>
     </rule>
 
     <!-- We use one space instead and allow newlines -->
