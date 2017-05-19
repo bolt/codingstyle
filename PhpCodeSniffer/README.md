@@ -1,4 +1,4 @@
-#Bolt PHP coding style standard
+# Bolt PHP coding style standard
 
 [Bolt](https://github.com/bolt) tries to adhere a coding style based on PSR-2 and the Symfony2 coding standard.
 To help following our standard a ruleset for [PHP_CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer) is provided.
@@ -6,14 +6,14 @@ To help following our standard a ruleset for [PHP_CodeSniffer](http://pear.php.n
 This standard is a work in progress and will be refined over time!
 
 
-##Installation
+## Installation
 
 - Install/update using composers `--require-dev` command
 - Install PHP_CodeSniffer or use the one that is installed with composer
 - Start phpcs with `--standard=<path-to-bolt-codingstyle>/PhpCodeSniffer/Bolt`
 
 
-##Usage
+## Usage
 
 There are various ways to run PHP_CodeSniffer. Here are a few for different development environments listed.
 
@@ -69,10 +69,10 @@ See [here] (http://www.jetbrains.com/phpstorm/webhelp/using-php-code-sniffer-too
 See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 
 
-##Sniffs used
+## Sniffs used
 
 
-###Bolt
+### Bolt
 
 - **Bolt.Functions.FunctionCallSignature** (+)<br>
   Allow indented fluent interface
@@ -84,7 +84,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **Bolt.NamingConventions.TraitSuffix** (+)<br>
   Throws errors if trait names are not suffixed with "Trait".
 
-###Generic
+### Generic
 
 - **Generic.ControlStructures.InlineControlStructure**<br>
   Control Structures should use braces.
@@ -135,7 +135,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **Generic.WhiteSpace.ScopeIndent**<br>
   Checks that control structures are structured correctly, and their content is indented correctly.
 
-###PEAR
+### PEAR
 
 - **PEAR.Classes.ClassDeclaration**<br>
   The opening brace of a class must be on the line after the definition by itself.
@@ -153,7 +153,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **PEAR.WhiteSpace.ScopeClosingBrace**<br>
   Closing braces should be indented at the same level as the beginning of the scope.
 
-###PSR1
+### PSR1
 
 - **PSR1.Classes.ClassDeclaration**<br>
   Checks the declaration of the class is correct.
@@ -165,7 +165,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **PSR1.Methods.CamelCapsMethodName**<br>
   Ensures method names are defined using camel case.
 
-###PSR2
+### PSR2
 
 - **PSR2.Classes.ClassDeclaration**<br>
   Checks the declaration of the class is correct.
@@ -200,7 +200,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **PSR2.Namespaces.UseDeclaration**<br>
   Ensures USE blocks are declared correctly.
 
-###Squiz
+### Squiz
 
 - **Squiz.Arrays.ArrayBracketSpacing**<br>
   No spaces around square brackets.
@@ -281,7 +281,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
   Checks that no whitespace proceeds the first content of the file, exists after the last content of the file, resides
   after content on any line, or are two empty lines in functions.
 
-###Symfony2
+### Symfony2
 
 - **Symfony2.Arrays.MultiLineArrayComma**<br>
   Warns if the last item in a multi line array does not have a trailing comma
@@ -324,7 +324,7 @@ See the manual of your editor if it supports PHP_CodeSniffer and how to use it.
 - **Symfony2.WhiteSpace.DiscourageFitzinator**<br>
   No trailing whitespace in a file
 
-###Zend
+### Zend
 
 - **Zend.Files.ClosingTag**<br>
   Files should not have closing php tags.
