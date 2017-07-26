@@ -36,6 +36,10 @@ class Config extends \PhpCsFixer\Config
      */
     public function addRules($rules)
     {
+        if ($rules instanceof RiskyRulesAwareInterface && $rules->isRisky()) {
+            $this->setRiskyAllowed(true);
+        }
+
         if ($rules instanceof \Traversable) {
             $rules = iterator_to_array($rules);
         }

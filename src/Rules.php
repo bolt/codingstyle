@@ -7,7 +7,7 @@ namespace Bolt\CsFixer;
  *
  * @author Carson Full <carsonfull@gmail.com>
  */
-class Rules implements \IteratorAggregate
+class Rules implements \IteratorAggregate, RiskyRulesAwareInterface
 {
     private $rules = [
         '@Symfony'       => true,
@@ -61,6 +61,14 @@ class Rules implements \IteratorAggregate
         $this->includeRisky = true;
 
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function isRisky()
+    {
+        return $this->includeRisky;
     }
 
     /**
