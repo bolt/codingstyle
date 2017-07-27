@@ -5,6 +5,7 @@
     <arg name="colors"/>
 
     <file>Bolt</file>
+    <file>src</file>
 
     <rule ref="Bolt"/>
 </ruleset>
