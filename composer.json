@@ -6,12 +6,21 @@
         {
             "name": "Gawain Lynch",
             "email": "gawain.lynch@gmail.com"
+        },
+        {
+            "name": "Carson Full",
+            "email": "carsonfull@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
-        "m6web/coke": "^2.1",
-        "m6web/symfony2-coding-standard": "^3.1",
-        "squizlabs/php_codesniffer": "^2.9"
+        "php": "^5.5 || ^7.0"
+    },
+    "require-dev": {
+        "escapestudios/symfony2-coding-standard": "^3.0@dev",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "conflict": {
+        "escapestudios/symfony2-coding-standard": "<3.0",
+        "squizlabs/php_codesniffer": "<3.0"
     }
 }

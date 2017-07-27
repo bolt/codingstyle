@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<ruleset name="Bolt">
+    <description>The coding standard for Bolt CMS</description>
+
+    <!-- Import Symfony, PSR2, PSR1 coding standards -->
+    <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony">
+        <!-- Don't force licenses -->
+        <exclude name="Symfony.Commenting.License.Warning"/>
+        <!-- or class comments -->
+        <exclude name="Symfony.Commenting.ClassComment"/>
+        <!-- or function comments -->
+        <exclude name="Symfony.Commenting.FunctionComment"/>
+
+        <!-- No one likes yoda conditions -->
+        <exclude name="Symfony.ControlStructure.YodaConditions"/>
+        <!-- Don't force function declaration arguments on one line -->
+        <exclude name="Symfony.Functions.Arguments"/>
+        <!-- Don't force function ordering -->
+        <exclude name="Symfony.Functions.ScopeOrder"/>
+    </rule>
+
+    <!-- Only allow short array syntax -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
+    <!-- Discourages the use of deprecated, forbidden functions that are kept in PHP for compatibility. -->
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Squiz.PHP.DiscouragedFunctions"/>
+    <rule ref="Squiz.PHP.ForbiddenFunctions"/>
+
+    <!-- Throws an error or warning when any code prefixed with an asperand is encountered. -->
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+
+    <!-- Warns about code that can never been executed. -->
+    <rule ref="Squiz.PHP.NonExecutableCode"/>
+
+    <!-- Checks for usage of "$this" in static methods, which will cause runtime errors. -->
+    <rule ref="Squiz.Scope.StaticThisUsage"/>
+
+    <!-- We use one space instead and allow newlines -->
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+        <properties>
+            <property name="spacing" value="1"/>
+            <property name="ignoreNewlines" value="true"/>
+        </properties>
+    </rule>
+
+    <!-- Makes sure that any strings that are "echoed" are not enclosed in brackets like a function call. -->
+    <rule ref="Squiz.Strings.EchoedStrings"/>
+
+    <!-- Checks the separation between methods in a class or interface. -->
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
+
+    <!-- All language constructs must contain a single space between themselves and their content. -->
+    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+
+    <!-- Verifies that operators have valid spacing surrounding them. -->
+    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
+
+    <!-- Verifies that operators have valid spacing surrounding them. -->
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true"/>
+        </properties>
+    </rule>
+
+</ruleset>
