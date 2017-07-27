@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ruleset>
+    <description>This is config for this repo</description>
+
+    <arg name="colors"/>
+
+    <file>Bolt</file>
+
+    <rule ref="Bolt"/>
+</ruleset>
