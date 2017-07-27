@@ -15,6 +15,11 @@ composer require bolt/codingstyle squizlabs/php_codesniffer escapestudios/symfon
 ```
 Add a `global` before `require` if you want to install it globally.
 
+If installing globally you also need to configure the `installed_paths`:
+```
+phpcs --config-set installed_paths "$(composer config --global data-dir)"
+```
+
 Then create a CodeSniffer config file named `phpcs.xml.dist`:
 ```xml
 <?xml version="1.0"?>
