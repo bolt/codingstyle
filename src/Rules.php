@@ -10,12 +10,45 @@ namespace Bolt\CsFixer;
 class Rules implements \IteratorAggregate, RiskyRulesAwareInterface
 {
     private $rules = [
-        '@Symfony'       => true,
-        '@Symfony:risky' => true,
+        '@Symfony'                    => true,
+        '@Symfony:risky'              => true,
+
+        // Override Symfony's rules
+        'binary_operator_spaces'      => [
+            'align_double_arrow' => true,
+            'align_equals'       => null, // ignore equals alignment
+        ],
+        'braces'                      => [
+            'allow_single_line_closure' => true,
+        ],
+        'concat_space'                => ['spacing' => 'one'],
+        'method_argument_space'       => [
+            'keep_multiple_spaces_after_comma' => true,
+            'ensure_fully_multiline'           => true,
+        ],
+        // Non-line @inheritdoc completely replaces anything else
+        // So notes can be added without including it in the doc.
+        'phpdoc_inline_tag'           => false,
+
+        // Add additional rules
+        'array_syntax'                => ['syntax' => 'short'],
+        'heredoc_to_nowdoc'           => true,
+        'linebreak_after_opening_tag' => true,
+        'no_useless_else'             => true,
+        'no_useless_return'           => true,
+        'ordered_imports'             => true,
+        'phpdoc_order'                => true,
+        'single_line_comment_style'   => ['comment_types' => ['hash']],
     ];
 
     private $riskyRules = [
-        '@Symfony:risky' => true,
+        '@Symfony:risky'              => true,
+        // Override Symfony's rules
+        'is_null'                     => ['use_yoda_style' => false],
+
+        // Add additional rules
+        'strict_comparison'           => true,
+        'strict_param'                => true,
     ];
 
     private $php56Rules = [
@@ -31,6 +64,7 @@ class Rules implements \IteratorAggregate, RiskyRulesAwareInterface
 
     private $php71Rules = [
         '@PHP71Migration' => true,
+        'list_syntax'     => ['syntax' => 'short'],
     ];
     private $php71RulesRisky = [
         '@PHP71Migration:risky' => true,
