@@ -22,7 +22,7 @@
         This currently wants a line break between @expectedException and @expectedExceptionMessage which we don't want.
         https://github.com/djoos/Symfony-coding-standard/issues/101
 
-        This is also already covered by php-cs-fixer.
+        This is covered by php-cs-fixer.
         -->
         <exclude name="Symfony.Commenting.Annotations"/>
 
@@ -31,6 +31,19 @@
         https://github.com/djoos/Symfony-coding-standard/issues/102
         -->
         <exclude name="PEAR.WhiteSpace.ScopeClosingBrace"/>
+
+        <!--
+        We make an exception for single line closures that these error on.
+        https://github.com/squizlabs/PHP_CodeSniffer/issues/1580
+
+        These are covered by php-cs-fixer.
+        -->
+        <exclude name="Generic.Formatting.DisallowMultipleStatements"/>
+        <!-- Regular functions are still covered by Generic.Functions.OpeningFunctionBraceBsdAllman (from Zend). -->
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.ContentAfterBrace"/>
+        <exclude name="Squiz.WhiteSpace.ScopeClosingBrace"/>
+        <!-- https://github.com/djoos/Symfony-coding-standard/issues/103 -->
+        <exclude name="Symfony.Formatting.BlankLineBeforeReturn"/>
     </rule>
 
     <!-- Only allow short array syntax -->
