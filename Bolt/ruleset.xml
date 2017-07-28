@@ -17,6 +17,14 @@
         <exclude name="Symfony.Functions.Arguments"/>
         <!-- Don't force function ordering -->
         <exclude name="Symfony.Functions.ScopeOrder"/>
+
+        <!--
+        This currently wants a line break between @expectedException and @expectedExceptionMessage which we don't want.
+        https://github.com/djoos/Symfony-coding-standard/issues/101
+
+        This is also already covered by php-cs-fixer.
+        -->
+        <exclude name="Symfony.Commenting.AnnotationsSniff"/>
     </rule>
 
     <!-- Only allow short array syntax -->
