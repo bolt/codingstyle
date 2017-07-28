@@ -24,7 +24,7 @@
 
         This is also already covered by php-cs-fixer.
         -->
-        <exclude name="Symfony.Commenting.AnnotationsSniff"/>
+        <exclude name="Symfony.Commenting.Annotations"/>
 
         <!--
         Duplicated by Squiz.WhiteSpace.ScopeClosingBrace (included by PSR). This one is included by Zend.
