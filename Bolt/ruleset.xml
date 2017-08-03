@@ -18,6 +18,9 @@
         <!-- Don't force function ordering -->
         <exclude name="Symfony.Functions.ScopeOrder"/>
 
+        <!-- We use a custom version of this rule that allows deprecation warnings -->
+        <exclude name="PSR1.Files.SideEffects"/>
+
         <!--
         This currently wants a line break between @expectedException and @expectedExceptionMessage which we don't want.
         https://github.com/djoos/Symfony-coding-standard/issues/101

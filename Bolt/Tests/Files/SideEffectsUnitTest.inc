@@ -1,0 +1,5 @@
+<?php
+
+zzzzzz();
+
+function zzzzzz() {}
