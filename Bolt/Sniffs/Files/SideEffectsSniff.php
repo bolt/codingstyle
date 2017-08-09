@@ -35,7 +35,7 @@ class SideEffectsSniff implements Sniff
             }
             //----- end modification --------
 
-            $file->addWarning($error, 0, 'FoundWithSymbols', $data);
+            $file->addWarning($error, $result['effect'], 'FoundWithSymbols', $data);
             $file->recordMetric($stackPtr, 'Declarations and side effects mixed', 'yes');
         } else {
             $file->recordMetric($stackPtr, 'Declarations and side effects mixed', 'no');

@@ -10,7 +10,7 @@ class SideEffectsUnitTest extends AbstractSniffTestCase
     {
         if ($filename === 'SideEffectsUnitTest.inc') {
             return [
-                1 => 1,
+                5 => 1,
             ];
         }
 
