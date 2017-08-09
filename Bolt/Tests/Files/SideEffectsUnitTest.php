@@ -8,12 +8,8 @@ class SideEffectsUnitTest extends AbstractSniffTestCase
 {
     protected function getWarningList($filename = null)
     {
-        if ($filename === 'SideEffectsUnitTest.inc') {
-            return [
-                1 => 1,
-            ];
-        }
-
-        return [];
+        return [
+            7 => 1,
+        ];
     }
 }
