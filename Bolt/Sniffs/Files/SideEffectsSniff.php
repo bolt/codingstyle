@@ -7,6 +7,11 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 
 class SideEffectsSniff implements Sniff
 {
+    public $allowed = [
+        'Deprecated',
+        'trigger_error',
+    ];
+
     public function register()
     {
         return [T_OPEN_TAG];
@@ -38,7 +43,7 @@ class SideEffectsSniff implements Sniff
             }
 
             // If effect is allowed, try again at next statement
-            if ($effect['code'] === T_STRING && in_array($effect['content'], ['Deprecated', 'trigger_error'])) {
+            if ($effect['code'] === T_STRING && in_array($effect['content'], $this->allowed)) {
                 $start = $file->findEndOfStatement($effectIndex) + 1;
                 continue;
             }
