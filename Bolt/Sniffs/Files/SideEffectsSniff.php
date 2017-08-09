@@ -10,6 +10,12 @@ class SideEffectsSniff implements Sniff
     public $allowed = [
         'Deprecated',
         'trigger_error',
+
+        // Used for BC handling
+        'class_alias',
+        'class_exists',
+        'trait_exists',
+        'interface_exists',
     ];
 
     public function register()
