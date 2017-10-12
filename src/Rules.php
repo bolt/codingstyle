@@ -29,6 +29,7 @@ class Rules implements \IteratorAggregate, RiskyRulesAwareInterface
         // Non-line @inheritdoc completely replaces anything else
         // So notes can be added without including it in the doc.
         'phpdoc_inline_tag'           => false,
+        'yoda_style'                  => ['equal' => false, 'identical' => false],
 
         // Add additional rules
         'array_syntax'                => ['syntax' => 'short'],
