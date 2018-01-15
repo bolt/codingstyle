@@ -32,14 +32,15 @@ class Rules implements \IteratorAggregate, RiskyRulesAwareInterface
         'yoda_style'                  => ['equal' => false, 'identical' => false],
 
         // Add additional rules
-        'array_syntax'                => ['syntax' => 'short'],
-        'heredoc_to_nowdoc'           => true,
-        'linebreak_after_opening_tag' => true,
-        'no_useless_else'             => true,
-        'no_useless_return'           => true,
-        'ordered_imports'             => true,
-        'phpdoc_order'                => true,
-        'single_line_comment_style'   => ['comment_types' => ['hash']],
+        'array_syntax'                           => ['syntax' => 'short'],
+        'heredoc_to_nowdoc'                      => true,
+        'linebreak_after_opening_tag'            => true,
+        'no_useless_else'                        => true,
+        'no_useless_return'                      => true,
+        'multiline_whitespace_before_semicolons' => ['strategy' => 'new_line_for_chained_calls'],
+        'ordered_imports'                        => true,
+        'phpdoc_order'                           => true,
+        'single_line_comment_style'              => ['comment_types' => ['hash']],
     ];
 
     private $riskyRules = [
