@@ -55,7 +55,7 @@
     <!-- Discourages the use of deprecated, forbidden functions that are kept in PHP for compatibility. -->
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
     <rule ref="Squiz.PHP.DiscouragedFunctions"/>
-    <rule ref="Squiz.PHP.ForbiddenFunctions"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
 
     <!-- Throws an error or warning when any code prefixed with an asperand is encountered. -->
     <rule ref="Generic.PHP.NoSilencedErrors"/>
